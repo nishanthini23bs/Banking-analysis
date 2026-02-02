@@ -1,110 +1,122 @@
-# 🏦 Banking Dashboard - End-to-End Data Analysis Project
+# Banking Analysis & Dashboard Project
 
-This project focuses on building an interactive **Banking Dashboard** using Power BI. It involves the complete data analysis lifecycle — from data cleaning and transformation to exploratory data analysis (EDA) and visualization.
-
----
-
-## 📌 Project Workflow
-
-Data ➡️ MySQL ➡️ Data Cleaning & Preparation ➡️ EDA ➡️ Power BI Dashboard
+This project presents an end-to-end data analysis of banking customers, combining Python-based exploratory analysis with an interactive Power BI dashboard to generate business insights on loans, deposits, customer engagement, and revenue.
 
 ---
 
-## 📊 Dataset Information
+## 🎯 Project Objective
 
-- **Number of columns**: 24
-- **Stored in**: MySQL
-
----
-
-## 🔧 Steps Involved
-
-### 1. Data Cleaning & Preparation
-
-- Categorized `Income` into bands:
-  - `Low`
-  - `Mid`
-  - `High`
-- Standardized gender, nationality, and other categorical variables.
-- Used conditional columns in Power BI to create income bands.
-- Replaced branch codes (`'1'`, `'2'`, etc.) with readable branch names.
-- Mapped gender codes:
-  - `'1'` → `Male`
-  - `'2'` → `Female`
-
----
-
-### 2. Exploratory Data Analysis (EDA)
-
-- Categorical analysis on:
-  - Gender
-  - Nationality
-- Numerical analysis on:
-  - Credit Card Balance
-  - Bank Loans
-  - Bank Deposits
-  - Checking Account
-  - Saving Account
-  - Estimated Income
-  - Superannuation Savings
-
----
-
-### 3. Key Insights from EDA
-
-- Strong positive correlation between:
-  - `Bank Deposits`, `Checking Account`, `Saving Account`, and `Foreign Currency Account`.
-- Customers with high balance in one account type tend to hold substantial funds in other accounts as well.
-
----
-
-## 📈 Dashboard Pages (Power BI)
-
-1. **Home**
-2. **Loan Analysis**
-3. **Deposit Analysis**
-4. **Summary**
+To analyze banking customer data and provide actionable insights for:
+- Customer segmentation  
+- Loan and deposit performance  
+- Revenue generation through fees  
+- Engagement patterns across demographics  
 
 ---
 
 ## 🚀 Tools & Technologies
 
-- **Database**: MySQL
-- **Visualization**: Power BI
-- **Languages**: SQL, DAX (in Power BI)
+- **Data Source**: CSV dataset  
+- **Analysis**: Python (Pandas, NumPy)  
+- **Visualization**: Power BI  
+- **Notebook**: Jupyter  
+- **Version Control**: Git & GitHub  
 
 ---
 
-## 🧠 Learnings
+## 📊 Dataset Overview
 
-- Data wrangling using SQL
-- Power BI conditional columns
-- Deriving insights through EDA
-- Building multi-page dashboards for presentation
+The dataset contains customer-level banking data including:
+- Demographics (Gender, Nationality, Income Band)  
+- Account details (Savings, Checking, Credit Cards)  
+- Loan information (Bank Loans, Business Lending)  
+- Engagement length  
+- Fees and balances  
 
----
-### ✅ Page 1: Home  
-> Overview of the banking data with summary statistics and key visuals.  
-
-<img src="powerbi/page1_home.png" alt="Page 1 - Home" width="700"/>
+File: `Banking.csv`
 
 ---
 
-### ✅ Page 2: Loan Analysis  
-> Insights into loan distribution, types, and customer segments.  
+## 📌 Key Metrics (All Time)
 
-<img src="powerbi/page2_loan_analysis.png" alt="Page 2 - Loan Analysis" width="700"/>
-
----
-
-### ✅ Page 3: Deposit Analysis  
-> Breakdown of account balances, deposit types, and correlation patterns.  
-
-<img src="powerbi/page3_deposit_analysis.png" alt="Page 3 - Deposit Analysis" width="700"/>
+- **Total Clients**: 2,940  
+- **Total Loans**: $4.38B  
+- **Total Deposits**: $3.77B  
+- **Total Fees**: $158.19M  
+- **Total Credit Card Amount**: $4.39K  
+- **Savings Account Amount**: $698.73M  
 
 ---
 
-### ✅ Page 4: Summary  
-> Final insights from EDA, including correlations and demographic trends.  
+## 📈 Dashboard Sections
 
-<img src="powerbi/page4_summary.png" alt="Page 4 - Summary" width="700"/>
+### 1. Home (Summary View)
+High-level KPIs showing:
+- Total clients  
+- Total loan & deposit  
+- Total fees and credit card amount  
+- Gender and time-based filters  
+
+---
+
+### 2. Loan Analysis
+Insights include:
+- Total Loan vs Bank Loan vs Business Lending  
+- Loan distribution by income band  
+- Loan by nationality  
+- Engagement length vs loan amount  
+
+---
+
+### 3. Deposit Analysis
+Insights include:
+- Total deposits vs bank deposits  
+- Savings & checking account breakdown  
+- Deposits by income band  
+- Foreign currency holdings  
+- Deposit trend by engagement timeframe  
+
+---
+
+### 4. Customer & Fee Analysis
+Insights include:
+- Total fees by loyalty classification  
+- Engagement length by nationality  
+- Advisor-wise customer distribution  
+- Credit card balances  
+
+---
+
+## 💡 Business Insights
+
+- European customers contribute the highest loan and deposit volumes  
+- Mid-income group dominates both loans and deposits  
+- Long-term customers generate significantly higher fees  
+- Private banking clients show higher average balances  
+- Business lending contributes more than personal bank loans  
+
+---
+
+## 📁 Files in Repository
+
+| File | Description |
+|------|-------------|
+| `BankEDA.ipynb` | Data cleaning, EDA and visualizations |
+| `Banking.csv` | Source dataset |
+| `Banking Dashboard.pbix` | Interactive Power BI dashboard |
+| `README.md` | Project documentation |
+
+---
+
+## ▶️ How to Run
+
+### Python Analysis
+```bash
+pip install pandas numpy matplotlib seaborn
+jupyter notebook BankEDA.ipynb
+
+
+👤 Author
+Nishanthini BS
+
+
