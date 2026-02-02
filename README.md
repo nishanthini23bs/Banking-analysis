@@ -116,7 +116,5 @@ pip install pandas numpy matplotlib seaborn
 jupyter notebook BankEDA.ipynb
 
 
-##👤 Author
-Nishanthini BS
 
 
